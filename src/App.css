@@ -1,5 +1,31 @@
 .App {
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-2rem {
+  margin-bottom: 2rem;
+}
+
+.card-item {
+  height: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: purple 1px solid;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .App-logo {
@@ -35,4 +61,69 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Para o projeto CSS ABAIXO, CSS de cima funciona para codigos em comentario */
+
+.container {
+  min-height:  100vh;
+  background: #eee;
+  /* margin: 1rem; */
+  margin: 0 auto; 
+
+  padding: 30px; 
+  background: #fff;
+}
+
+.posts {
+  
+  display: grid;
+  /* aplica auto auto-fill 
+     maximo de 280px para cada elemento em tela
+     Para telas de mobile exemplo
+  */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* gap espaçamento entro os elementos na grid */
+  gap: 25px; /* 30px */ 
+  background: #fff;
+}
+
+.post {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Para criar efeito quando mouse passar em cima do elemento Mousehover */
+  transition: transform 100ms ease-in-out;
+}
+
+.post:hover {
+  transform: scale(1.05); /* 1.03 */
+}
+
+.post-content {
+  padding: 20px; /* 20px 30px; /* 30px */
+}
+
+.post-img {
+  width: 100%;
+  height: 250px;
+}
+
+/*
+
+.post img {
+  max-width: 100%
+}
+
+*/
+
+@media only screen and (max-width: 500px ) {  
+  .posts {
+   background: #fff;
+  }
+}
+
+.title-strong {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
